@@ -3,32 +3,56 @@
     "ordem": "1",
     "tipo": "Edital",
     "descricao": "Edital de abertura do Processo Seletivo nº 002/2025.",
-    "data": "Informar data",
+    "data": "25/08/2025",
     "situacao": "Publicado",
-    "arquivo": "arquivos/processos-seletivos/processo-seletivo-002-2025.pdf"
+    "arquivo": "arquivos/processos-seletivos/PSS 001-2025 - Edital.pdf"
   },
   {
     "ordem": "2",
     "tipo": "Resultado / Classificação",
-    "descricao": "Lista de aprovados com respectivas classificações.",
-    "data": "Informar data",
+    "descricao": "1º Resultado Parcial",
+    "data": "02/09/2025",
     "situacao": "Publicado",
-    "arquivo": "arquivos/processos-seletivos/resultado-processo-seletivo-002-2025.pdf"
+    "arquivo": "arquivos/processos-seletivos/PSS 002-2025 - RESULTADO PARCIAL - 1.pdf"
   },
   {
     "ordem": "3",
-    "tipo": "Homologação",
-    "descricao": "Ato de homologação do Processo Seletivo nº 002/2025.",
-    "data": "Informar data",
+    "tipo": "Resultado / Classificação",
+    "descricao": "2º Resultado Parcial",
+    "data": "08/09/2025",
     "situacao": "Publicado",
-    "arquivo": "arquivos/processos-seletivos/homologacao-processo-seletivo-002-2025.pdf"
+    "arquivo": "arquivos/processos-seletivos/PSS 002-2025 - RESULTADO PARCIAL - 2.pdf"
+  },
+    {
+    "ordem": "4",
+    "tipo": "Resultado / Classificação",
+    "descricao": "Resultado Final",
+    "data": "15/09/2025",
+    "situacao": "Publicado",
+    "arquivo": "arquivos/processos-seletivos/PSS 002-2025 - RESULTADO FINAL.pdf"
   },
   {
-    "ordem": "4",
-    "tipo": "Convocações / Contratações",
-    "descricao": "Convocações, contratações e demais atos posteriores, quando houver.",
-    "data": "Informar data",
+    "ordem": "5",
+    "tipo": "Homologação",
+    "descricao": "Ato de homologação do Processo Seletivo nº 002/2025.",
+    "data": "23/09/2025",
     "situacao": "Publicado",
-    "arquivo": "arquivos/processos-seletivos/convocacoes-processo-seletivo-002-2025.pdf"
+    "arquivo": "arquivos/processos-seletivos/PSS 002-2025 - Homologação.pdf"
+  },
+  {
+    "ordem": "6",
+    "tipo": "Convocações / Contratações",
+    "descricao": "Convocação",
+    "data": "23/09/2025",
+    "situacao": "Publicado",
+    "arquivo": "arquivos/processos-seletivos/PSS 002-2025 - Convocação.pdf"
+  },
+    {
+    "ordem": "7",
+    "tipo": "Convocações / Contratações",
+    "descricao": "Contratação",
+    "data": "24/10/2025",
+    "situacao": "Publicado",
+    "arquivo": "arquivos/processos-seletivos/PSS 002-2025 - Contrato e Portaria.pdf"
   }
 ]
