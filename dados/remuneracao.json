@@ -1,0 +1,258 @@
+[
+  {
+    "area": "Diretoria Executiva",
+    "cargo": "Diretor Executivo",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 4.000,00"
+  },
+  {
+    "area": "Diretoria Executiva",
+    "cargo": "Diretor Administrativo/Financeiro",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Diretoria Executiva",
+    "cargo": "Assessor Jurídico",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 4.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saneamento Básico e Gestão Integrada de Resíduos Sólidos",
+    "cargo": "Engenheiro Sanitarista",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saneamento Básico e Gestão Integrada de Resíduos Sólidos",
+    "cargo": "Engenheiro Ambiental",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saneamento Básico e Gestão Integrada de Resíduos Sólidos",
+    "cargo": "Biólogo",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saneamento Básico e Gestão Integrada de Resíduos Sólidos",
+    "cargo": "Técnico em Meio Ambiente",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "40 horas semanais",
+    "remuneracao": "R$ 1.621,00"
+  },
+  {
+    "area": "Câmara Temática de Saneamento Básico e Gestão Integrada de Resíduos Sólidos",
+    "cargo": "Coordenador Técnico",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 2.000,00"
+  },
+  {
+    "area": "Câmara Temática de Meio Ambiente e Turismo",
+    "cargo": "Turismólogo",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "40 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Meio Ambiente e Turismo",
+    "cargo": "Engenheiro Ambiental",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Meio Ambiente e Turismo",
+    "cargo": "Engenheiro Sanitarista",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Meio Ambiente e Turismo",
+    "cargo": "Engenheiro Civil",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Meio Ambiente e Turismo",
+    "cargo": "Biólogo",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Meio Ambiente e Turismo",
+    "cargo": "Fiscal Ambiental",
+    "natureza": "Emprego público",
+    "vagas": "02",
+    "cargaHoraria": "40 horas semanais",
+    "remuneracao": "R$ 1.621,00"
+  },
+  {
+    "area": "Câmara Temática de Meio Ambiente e Turismo",
+    "cargo": "Coordenador Técnico",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação integral",
+    "remuneracao": "R$ 2.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saúde",
+    "cargo": "Enfermeiro",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saúde",
+    "cargo": "Clínico Geral",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 7.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saúde",
+    "cargo": "Farmacêutico",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Saúde",
+    "cargo": "Coordenador Técnico",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 2.000,00"
+  },
+  {
+    "area": "Câmara Temática de Inspeção Sanitária, Sanidade Agropecuária e Segurança Alimentar",
+    "cargo": "Médico Veterinário",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 2.900,00"
+  },
+  {
+    "area": "Câmara Temática de Inspeção Sanitária, Sanidade Agropecuária e Segurança Alimentar",
+    "cargo": "Engenheiro Agrônomo",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Inspeção Sanitária, Sanidade Agropecuária e Segurança Alimentar",
+    "cargo": "Técnico em Agropecuária",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "40 horas semanais",
+    "remuneracao": "R$ 1.621,00"
+  },
+  {
+    "area": "Câmara Temática de Inspeção Sanitária, Sanidade Agropecuária e Segurança Alimentar",
+    "cargo": "Coordenador Técnico",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 2.000,00"
+  },
+  {
+    "area": "Câmara Temática de Iluminação Pública",
+    "cargo": "Técnico Eletricista",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "40 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Iluminação Pública",
+    "cargo": "Engenheiro Elétrico",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Iluminação Pública",
+    "cargo": "Coordenador Técnico",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 2.000,00"
+  },
+  {
+    "area": "Câmara Temática de Infraestrutura, Mobilidade Urbana e Regularização Fundiária",
+    "cargo": "Engenheiro Civil",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "20 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Câmara Temática de Infraestrutura, Mobilidade Urbana e Regularização Fundiária",
+    "cargo": "Coordenador Técnico",
+    "natureza": "Cargo em comissão",
+    "vagas": "01",
+    "cargaHoraria": "Dedicação exclusiva",
+    "remuneracao": "R$ 2.000,00"
+  },
+  {
+    "area": "Departamentos Setoriais",
+    "cargo": "Contador",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Departamentos Setoriais",
+    "cargo": "Advogado",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Departamentos Setoriais",
+    "cargo": "Administrador",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "30 horas semanais",
+    "remuneracao": "R$ 3.000,00"
+  },
+  {
+    "area": "Departamentos Setoriais",
+    "cargo": "Técnico em Informática",
+    "natureza": "Emprego público",
+    "vagas": "01",
+    "cargaHoraria": "40 horas semanais",
+    "remuneracao": "R$ 1.621,00"
+  }
+]

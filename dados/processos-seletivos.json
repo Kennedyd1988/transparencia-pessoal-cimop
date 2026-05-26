@@ -1,0 +1,58 @@
+[
+  {
+    "ano": "2026",
+    "numero": "Declaração Negativa - 2026",
+    "objeto": "Não houve realização de processo seletivo no exercício de 2026 até a presente data.",
+    "dataPublicacao": "-",
+    "situacao": "Sem registros",
+    "detalhes": ""
+  },
+  {
+    "ano": "2025",
+    "numero": "Processo Seletivo nº 001/2025",
+    "objeto": "Processo seletivo público realizado pelo CIMOP no exercício de 2025.",
+    "dataPublicacao": "Informar data de publicação",
+    "situacao": "Publicado",
+    "detalhes": "processo-seletivo-001-2025.html"
+  },
+  {
+    "ano": "2025",
+    "numero": "Processo Seletivo nº 002/2025",
+    "objeto": "Processo seletivo público realizado pelo CIMOP no exercício de 2025.",
+    "dataPublicacao": "Informar data de publicação",
+    "situacao": "Publicado",
+    "detalhes": "processo-seletivo-002-2025.html"
+  },
+  {
+    "ano": "2024",
+    "numero": "Declaração Negativa - 2024",
+    "objeto": "Não houve realização de processo seletivo no exercício de 2024.",
+    "dataPublicacao": "-",
+    "situacao": "Sem registros",
+    "detalhes": ""
+  },
+  {
+    "ano": "2023",
+    "numero": "Declaração Negativa - 2023",
+    "objeto": "Não houve realização de processo seletivo no exercício de 2023.",
+    "dataPublicacao": "-",
+    "situacao": "Sem registros",
+    "detalhes": ""
+  },
+  {
+    "ano": "2022",
+    "numero": "Declaração Negativa - 2022",
+    "objeto": "Não houve realização de processo seletivo no exercício de 2022.",
+    "dataPublicacao": "-",
+    "situacao": "Sem registros",
+    "detalhes": ""
+  },
+  {
+    "ano": "2021",
+    "numero": "Declaração Negativa - 2021",
+    "objeto": "Não houve realização de processo seletivo no exercício de 2021.",
+    "dataPublicacao": "-",
+    "situacao": "Sem registros",
+    "detalhes": ""
+  }
+]

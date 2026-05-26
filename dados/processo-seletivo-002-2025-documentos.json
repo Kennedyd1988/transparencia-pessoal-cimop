@@ -1,0 +1,34 @@
+[
+  {
+    "ordem": "1",
+    "tipo": "Edital",
+    "descricao": "Edital de abertura do Processo Seletivo nº 002/2025.",
+    "data": "Informar data",
+    "situacao": "Publicado",
+    "arquivo": "arquivos/processos-seletivos/processo-seletivo-002-2025.pdf"
+  },
+  {
+    "ordem": "2",
+    "tipo": "Resultado / Classificação",
+    "descricao": "Lista de aprovados com respectivas classificações.",
+    "data": "Informar data",
+    "situacao": "Publicado",
+    "arquivo": "arquivos/processos-seletivos/resultado-processo-seletivo-002-2025.pdf"
+  },
+  {
+    "ordem": "3",
+    "tipo": "Homologação",
+    "descricao": "Ato de homologação do Processo Seletivo nº 002/2025.",
+    "data": "Informar data",
+    "situacao": "Publicado",
+    "arquivo": "arquivos/processos-seletivos/homologacao-processo-seletivo-002-2025.pdf"
+  },
+  {
+    "ordem": "4",
+    "tipo": "Convocações / Contratações",
+    "descricao": "Convocações, contratações e demais atos posteriores, quando houver.",
+    "data": "Informar data",
+    "situacao": "Publicado",
+    "arquivo": "arquivos/processos-seletivos/convocacoes-processo-seletivo-002-2025.pdf"
+  }
+]

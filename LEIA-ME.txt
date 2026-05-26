@@ -1,0 +1,12 @@
+PACOTE CORRIGIDO
+
+Páginas:
+- cargos-salarios.html
+- estagiarios-terceirizados.html
+- processos-seletivos.html
+- concursos-publicos.html
+- processo-seletivo-001-2025.html
+- processo-seletivo-002-2025.html
+
+A página processos-seletivos.html mostra a tabela principal e o botão “Ver detalhes”.
+Cada página específica reúne edital, resultado/classificação, homologação, convocações/contratações e demais atos.
