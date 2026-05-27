@@ -9,19 +9,19 @@
   },
   {
     "ano": "2025",
-    "numero": "Processo Seletivo nº 001/2025",
-    "objeto": "Processo seletivo público realizado pelo CIMOP no exercício de 2025.",
-    "dataPublicacao": "Informar data de publicação",
-    "situacao": "Publicado",
-    "detalhes": "processo-seletivo-001-2025.html"
-  },
-  {
-    "ano": "2025",
     "numero": "Processo Seletivo nº 002/2025",
     "objeto": "Processo seletivo público realizado pelo CIMOP no exercício de 2025.",
-    "dataPublicacao": "Informar data de publicação",
+    "dataPublicacao": "25/08/2025",
     "situacao": "Publicado",
     "detalhes": "processo-seletivo-002-2025.html"
+  },
+    {
+    "ano": "2025",
+    "numero": "Processo Seletivo nº 001/2025",
+    "objeto": "Processo seletivo público realizado pelo CIMOP no exercício de 2025.",
+    "dataPublicacao": "01/08/2025",
+    "situacao": "Publicado",
+    "detalhes": "processo-seletivo-001-2025.html"
   },
   {
     "ano": "2024",
