@@ -11,7 +11,150 @@ function atualizarPaginacao(){const info=document.getElementById("infoPagina");i
 function paginaAnterior(){if(paginaAtual>1){paginaAtual--;preencherRemuneracao()}}
 function proximaPagina(){const totalPaginas=Math.max(1,Math.ceil(dadosFiltrados.length/itensPorPagina));if(paginaAtual<totalPaginas){paginaAtual++;preencherRemuneracao()}}
 function preencherTabelaSimples(idTabela,dados,colunas,mensagemVazia){const tabela=document.getElementById(idTabela);if(!tabela)return;if(!dados.length){tabela.innerHTML=`<tr><td colspan="${colunas.length}" class="linha-vazia">${mensagemVazia}</td></tr>`;return}tabela.innerHTML=dados.map(item=>`<tr>${colunas.map(c=>{if(c.tipo==="status")return`<td><span class="status ${statusClasse(item[c.campo])}">${item[c.campo]}</span></td>`;if(c.tipo==="arquivo")return`<td>${linhaArquivo(item[c.campo])}</td>`;if(c.tipo==="detalhes")return`<td>${linhaDetalhes(item[c.campo])}</td>`;return`<td>${item[c.campo]}</td>`}).join("")}</tr>`).join("")}
-async function iniciarPagina(){preencherData();if(window.tipoPagina==="cargos"){dadosPagina.remuneracao=await carregarJSON("dados/remuneracao.json");dadosFiltrados=dadosPagina.remuneracao;preencherRemuneracao()}if(window.tipoPagina==="estagiarios-terceirizados"){preencherTabelaSimples("tabelaEstagiarios",await carregarJSON("dados/estagiarios.json"),[{campo:"ano"},{campo:"nome"},{campo:"dataContratacao"},{campo:"dataTermino"},{campo:"situacao",tipo:"status"},{campo:"observacao"}],"Não houve contratação de estagiários no período consultado.");preencherTabelaSimples("tabelaTerceirizados",await carregarJSON("dados/terceirizados.json"),[{campo:"ano"},{campo:"nome"},{campo:"funcao"},{campo:"empresa"},{campo:"situacao",tipo:"status"},{campo:"observacao"}],"Não houve contratação de terceirizados no período consultado.")}if(window.tipoPagina==="processos-seletivos"){preencherTabelaSimples("tabelaProcessos",await carregarJSON("dados/processos-seletivos.json"),[{campo:"ano"},{campo:"numero"},{campo:"objeto"},{campo:"dataPublicacao"},{campo:"situacao",tipo:"status"},{campo:"detalhes",tipo:"detalhes"}],"Não houve processos seletivos no período consultado.")}if(window.tipoPagina==="concursos"){preencherTabelaSimples("tabelaConcursos",await carregarJSON("dados/concursos-publicos.json"),[{campo:"ano"},{campo:"numero"},{campo:"objeto"},{campo:"dataPublicacao"},{campo:"situacao",tipo:"status"},{campo:"detalhes",tipo:"detalhes"}],"Não houve concursos públicos no período consultado.")}if(window.tipoPagina==="detalhe-processo"){preencherTabelaSimples("tabelaDocumentos",await carregarJSON(window.arquivoDadosDetalhe),[{campo:"ordem"},{campo:"tipo"},{campo:"descricao"},{campo:"data"},{campo:"situacao",tipo:"status"},{campo:"arquivo",tipo:"arquivo"}],"Não há documentos cadastrados para este processo.")}if(window.tipoPagina==="detalhe-concurso"){preencherTabelaSimples("tabelaDocumentos",await carregarJSON(window.arquivoDadosDetalhe),[{campo:"ordem"},{campo:"tipo"},{campo:"descricao"},{campo:"data"},{campo:"situacao",tipo:"status"},{campo:"arquivo",tipo:"arquivo"}],"Não há documentos cadastrados para este concurso.")}}
+function normalizarTexto(valor) {
+  return String(valor || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+function preencherOpcoesFiltroConcursos(dados) {
+  const filtroAno = document.getElementById("filtroAno");
+  const filtroSituacao = document.getElementById("filtroSituacao");
+
+  if (filtroAno) {
+    const anos = [...new Set(
+      dados
+        .map(item => item.ano)
+        .filter(Boolean)
+    )].sort((a, b) => Number(b) - Number(a));
+
+    filtroAno.innerHTML =
+      '<option value="">Todos os exercícios</option>' +
+      anos
+        .map(ano => `<option value="${ano}">${ano}</option>`)
+        .join("");
+  }
+
+  if (filtroSituacao) {
+    const situacoes = [...new Set(
+      dados
+        .map(item => item.situacao)
+        .filter(Boolean)
+    )].sort((a, b) =>
+      String(a).localeCompare(String(b), "pt-BR")
+    );
+
+    filtroSituacao.innerHTML =
+      '<option value="">Todas as situações</option>' +
+      situacoes
+        .map(situacao =>
+          `<option value="${situacao}">${situacao}</option>`
+        )
+        .join("");
+  }
+}
+
+function aplicarFiltrosConcursos() {
+  const dados = dadosPagina.concursos || [];
+
+  const termo = normalizarTexto(
+    document.getElementById("campoBusca")?.value
+  );
+
+  const anoSelecionado =
+    document.getElementById("filtroAno")?.value || "";
+
+  const situacaoSelecionada = normalizarTexto(
+    document.getElementById("filtroSituacao")?.value
+  );
+
+  const resultados = dados.filter(item => {
+    const correspondeAoTexto =
+      !termo ||
+      normalizarTexto(item.ano).includes(termo) ||
+      normalizarTexto(item.numero).includes(termo) ||
+      normalizarTexto(item.objeto).includes(termo) ||
+      normalizarTexto(item.dataPublicacao).includes(termo) ||
+      normalizarTexto(item.situacao).includes(termo);
+
+    const correspondeAoAno =
+      !anoSelecionado ||
+      String(item.ano) === String(anoSelecionado);
+
+    const correspondeASituacao =
+      !situacaoSelecionada ||
+      normalizarTexto(item.situacao) === situacaoSelecionada;
+
+    return (
+      correspondeAoTexto &&
+      correspondeAoAno &&
+      correspondeASituacao
+    );
+  });
+
+  preencherTabelaSimples(
+    "tabelaConcursos",
+    resultados,
+    [
+      { campo: "ano" },
+      { campo: "numero" },
+      { campo: "objeto" },
+      { campo: "dataPublicacao" },
+      { campo: "situacao", tipo: "status" },
+      { campo: "detalhes", tipo: "detalhes" }
+    ],
+    "Nenhum registro foi localizado para os parâmetros informados."
+  );
+
+  atualizarResultadoFiltro(
+    resultados.length,
+    dados.length
+  );
+}
+
+function atualizarResultadoFiltro(quantidade, total) {
+  const elemento = document.getElementById("resultadoFiltro");
+
+  if (!elemento) return;
+
+  if (quantidade === total) {
+    elemento.innerText =
+      `Exibindo todos os ${total} registros disponíveis.`;
+    return;
+  }
+
+  elemento.innerText =
+    `${quantidade} de ${total} registros correspondem aos parâmetros selecionados.`;
+}
+
+function limparFiltrosConcursos() {
+  const campoBusca = document.getElementById("campoBusca");
+  const filtroAno = document.getElementById("filtroAno");
+  const filtroSituacao =
+    document.getElementById("filtroSituacao");
+
+  if (campoBusca) campoBusca.value = "";
+  if (filtroAno) filtroAno.value = "";
+  if (filtroSituacao) filtroSituacao.value = "";
+
+  aplicarFiltrosConcursos();
+}
+
+async function iniciarPagina(){preencherData();if(window.tipoPagina==="cargos"){dadosPagina.remuneracao=await carregarJSON("dados/remuneracao.json");dadosFiltrados=dadosPagina.remuneracao;preencherRemuneracao()}if(window.tipoPagina==="estagiarios-terceirizados"){preencherTabelaSimples("tabelaEstagiarios",await carregarJSON("dados/estagiarios.json"),[{campo:"ano"},{campo:"nome"},{campo:"dataContratacao"},{campo:"dataTermino"},{campo:"situacao",tipo:"status"},{campo:"observacao"}],"Não houve contratação de estagiários no período consultado.");preencherTabelaSimples("tabelaTerceirizados",await carregarJSON("dados/terceirizados.json"),[{campo:"ano"},{campo:"nome"},{campo:"funcao"},{campo:"empresa"},{campo:"situacao",tipo:"status"},{campo:"observacao"}],"Não houve contratação de terceirizados no período consultado.")}if(window.tipoPagina==="processos-seletivos"){preencherTabelaSimples("tabelaProcessos",await carregarJSON("dados/processos-seletivos.json"),[{campo:"ano"},{campo:"numero"},{campo:"objeto"},{campo:"dataPublicacao"},{campo:"situacao",tipo:"status"},{campo:"detalhes",tipo:"detalhes"}],"Não houve processos seletivos no período consultado.")}
+if (window.tipoPagina === "concursos") {
+  dadosPagina.concursos = await carregarJSON(
+    "dados/concursos-publicos.json"
+  );
+
+  preencherOpcoesFiltroConcursos(
+    dadosPagina.concursos
+  );
+
+  aplicarFiltrosConcursos();
+}                               
+if(window.tipoPagina==="detalhe-processo"){preencherTabelaSimples("tabelaDocumentos",await carregarJSON(window.arquivoDadosDetalhe),[{campo:"ordem"},{campo:"tipo"},{campo:"descricao"},{campo:"data"},{campo:"situacao",tipo:"status"},{campo:"arquivo",tipo:"arquivo"}],"Não há documentos cadastrados para este processo.")}if(window.tipoPagina==="detalhe-concurso"){preencherTabelaSimples("tabelaDocumentos",await carregarJSON(window.arquivoDadosDetalhe),[{campo:"ordem"},{campo:"tipo"},{campo:"descricao"},{campo:"data"},{campo:"situacao",tipo:"status"},{campo:"arquivo",tipo:"arquivo"}],"Não há documentos cadastrados para este concurso.")}}
 function obterDadosDasTabelas(){const dados=[];document.querySelectorAll(".bloco").forEach(bloco=>{const titulo=bloco.querySelector("h3")?.innerText||"Seção";const tabela=bloco.querySelector("table");if(!tabela)return;const cabecalhos=Array.from(tabela.querySelectorAll("thead th")).map(th=>th.innerText.trim());tabela.querySelectorAll("tbody tr").forEach(tr=>{if(tr.style.display==="none")return;const colunas=Array.from(tr.querySelectorAll("td")).map(td=>td.innerText.trim());if(colunas.length===cabecalhos.length){const item={secao:titulo};cabecalhos.forEach((c,i)=>item[c]=colunas[i]);dados.push(item)}})});return dados}
 function baixarArquivo(conteudo,nomeArquivo,tipo){const blob=new Blob([conteudo],{type:tipo});const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download=nomeArquivo;link.click()}
 function nomeBase(){return document.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
